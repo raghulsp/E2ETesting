@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginPage extends Hooks {
+public class LoginPage {
 
     private final WebDriver driver;
     private final WaitUtils waitUtils;
@@ -23,10 +23,18 @@ public class LoginPage extends Hooks {
 
 
     private final By loginButton = By.xpath(ElementLocator.getLocator("login.loginButton"));
+    private final By emailField = By.xpath(ElementLocator.getLocator("login.emailField"));
 
     public void clickLoginButton() {
         WebElement element = driver.findElement(loginButton);
         waitUtils.waitForElementVisible(element);
         element.click();
+    }
+
+    public void enterEmail(){
+        WebElement element = driver.findElement(emailField);
+        waitUtils.waitForElementVisible(element);
+        element.click();
+        element.sendKeys("raghu.kulgeri@gmail.com");
     }
 }
