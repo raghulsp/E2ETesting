@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM  "http://testng.org/testng-1.0.dtd">
+<suite name="EndToEndTestSuite">
+    <test name="EndToEndTests">
+        <classes>
+            <class name="com.endtoend.automation.stepDefs.LoginTest"></class>
+        </classes>
+    </test>
+</suite>
