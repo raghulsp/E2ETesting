@@ -1,4 +1,4 @@
-Feature: Test the login feature in flipkart
+Feature: Test the login feature in Amazon
 
   @LoginTest
   Scenario: Login to Amazon using username and password
