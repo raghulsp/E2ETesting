@@ -21,7 +21,7 @@ public class LoginPage extends BasePage {
     private final By emailField = By.xpath(ElementLocator.getLocator("login.emailField"));
 
     public void clickLoginButton() {
-        navigateTo("https://www.amazon.in");
+        navigateTo("https://www.amazon.com");
         WebElement element = findTheElement(loginButton);
         waitUtils.waitForElementVisible(element);
         clickElement(element);
