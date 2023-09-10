@@ -23,15 +23,12 @@ public class LoginTest {
         if (loginPage==null){
             loginPage = new LoginPage(driver);
         }
-        logger.info("Launching Amazon");
 //        driver.get("https://www.amazon.in/");
-        logger.info("Clicking login button");
         loginPage.clickLoginButton();
     }
 
     @And("registered email is entered")
     public void registeredEmailIsEntered() {
-        logger.info("Entering registered email");
         loginPage.enterEmail();
     }
 
