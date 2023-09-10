@@ -9,14 +9,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
-public class LoginPage {
+public class LoginPage extends BasePage {
 
-    private final WebDriver driver;
     private final WaitUtils waitUtils;
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
         this.waitUtils = new WaitUtils(driver,10);
 //        PageFactory.initElements(driver,this);
     }
@@ -26,15 +26,21 @@ public class LoginPage {
     private final By emailField = By.xpath(ElementLocator.getLocator("login.emailField"));
 
     public void clickLoginButton() {
-        WebElement element = driver.findElement(loginButton);
+        navigateTo("https://www.amazon.in");
+        WebElement element = findTheElement(loginButton);
         waitUtils.waitForElementVisible(element);
-        element.click();
+        clickElement(element);
     }
 
     public void enterEmail(){
-        WebElement element = driver.findElement(emailField);
-        waitUtils.waitForElementVisible(element);
-        element.click();
-        element.sendKeys("raghu.kulgeri@gmail.com");
+//        WebElement element = driver.findElement(emailField);
+//        waitUtils.waitForElementVisible(element);
+//        element.click();
+        waitForVisibleAndClickAndEnterText(waitUtils, emailField,"raghu.kulgeri@gmail.com");
+
+    }
+
+    public boolean isEmailFieldDisplayed(){
+      return findTheElement(emailField).isDisplayed();
     }
 }

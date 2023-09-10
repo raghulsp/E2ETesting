@@ -24,7 +24,7 @@ public class LoginTest {
             loginPage = new LoginPage(driver);
         }
         logger.info("Launching Amazon");
-        driver.get("https://www.amazon.in/");
+//        driver.get("https://www.amazon.in/");
         logger.info("Clicking login button");
         loginPage.clickLoginButton();
     }
@@ -38,5 +38,10 @@ public class LoginTest {
     @Given("another scenario")
     public void anotherScenario() {
         System.out.println("Executing another senario");
+    }
+
+    @And("continue button is clicked")
+    public void continueButtonIsClicked() {
+
     }
 }

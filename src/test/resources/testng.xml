@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM  "http://testng.org/testng-1.0.dtd">
+<suite name="EndToEndTestSuite">
+    <listeners>
+        <listener class-name="com.endtoend.automation.utils.ScreenshotListener">
+            <parameter name="driver" value="driver"></parameter>
+        </listener>
+    </listeners>
+    <test name="MyTest">
+        <classes>
+            <class name="com.endtoend.automation.acceptanceTests.RunIT"></class>
+        </classes>
+    </test>
+</suite>

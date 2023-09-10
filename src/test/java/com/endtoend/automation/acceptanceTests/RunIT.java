@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = {"com.endtoend.automation.stepDefs", "com.endtoend.automation.acceptanceTests"},
         tags = "@LoginTest",
-        plugin = {"json:target/cucumber-reports/CucumberTestReport.json"}
+        plugin = {"pretty","json:target/cucumber-reports/CucumberTestReport.json"}
 )
 
 public class RunIT {

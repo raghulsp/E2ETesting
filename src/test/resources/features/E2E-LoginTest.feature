@@ -1,9 +1,10 @@
 Feature: Test the login feature in flipkart
 
   @LoginTest
-  Scenario: Login to flipkart using username and password
+  Scenario: Login to Amazon using username and password
     Given Amazon site is launched and sign in link is clicked
     And registered email is entered
+    And continue button is clicked
 
 
     @AnotherTest
