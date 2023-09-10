@@ -44,24 +44,24 @@ public class Hooks {
         }
     }
 
-    @After(order = 1)
-    public void generateReport() {
-        String cucumberOutputPath = "cucumber-reports/cucumber.json";
-        String reportOutputPath = "cucumber-reports/cucumber-reports";
-
-        File reportOutputDirectory = new File(reportOutputPath);
-
-        List<String> jsonFiles = new ArrayList<>();
-        jsonFiles.add(cucumberOutputPath);
-
-        Configuration configuration = new Configuration(reportOutputDirectory, "E2E_Testing");
-        configuration.setBuildNumber("1");
-        configuration.addClassifications("Platform", "macOS"); // Replace with your actual platform
-        configuration.addClassifications("Browser", "Edge");
-
-        ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
-        reportBuilder.generateReports();
-    }
+//    @After(order = 1)
+//    public void generateReport() {
+//        String cucumberOutputPath = "target/cucumber.json";
+//        String reportOutputPath = "target/cucumber-reports";
+//
+//        File reportOutputDirectory = new File(reportOutputPath);
+//
+//        List<String> jsonFiles = new ArrayList<>();
+//        jsonFiles.add(cucumberOutputPath);
+//
+//        Configuration configuration = new Configuration(reportOutputDirectory, "E2E_Testing");
+//        configuration.setBuildNumber("1");
+//        configuration.addClassifications("Platform", "macOS"); // Replace with your actual platform
+//        configuration.addClassifications("Browser", "Edge");
+//
+//        ReportBuilder reportBuilder = new ReportBuilder(jsonFiles, configuration);
+//        reportBuilder.generateReports();
+//    }
 
     @After(order = 0)
     public void tearDown() throws InterruptedException {
