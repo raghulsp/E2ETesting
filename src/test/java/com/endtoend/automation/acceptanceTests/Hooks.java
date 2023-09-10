@@ -46,8 +46,8 @@ public class Hooks {
 
     @After(order = 1)
     public void generateReport() {
-        String cucumberOutputPath = "target/cucumber.json";
-        String reportOutputPath = "target/cucumber-reports";
+        String cucumberOutputPath = "cucumber-reports/cucumber.json";
+        String reportOutputPath = "cucumber-reports/cucumber-reports";
 
         File reportOutputDirectory = new File(reportOutputPath);
 
